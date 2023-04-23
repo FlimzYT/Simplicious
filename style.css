@@ -1,12 +1,13 @@
 body, html{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 *{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
-div:active, button:active{
+div:active, button:active, a{
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -15,7 +16,48 @@ div:active, button:active{
     --light-cta: #FF9753;
     --gray: #9A9A9A;
     --light-gray: #F0F0F0;
+    --cta-filter: invert(63%) sepia(35%) saturate(6839%) hue-rotate(349deg) brightness(95%) contrast(110%);
 }
+
+/* Navigation */
+
+nav{
+    height: 84px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+    box-shadow: 0px -10px 106px rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.nav-link{
+    text-decoration: none;
+}
+.active-page{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+    color: var(--light-cta);
+    background-color: #FFF0E7;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+.active-page img{
+    filter: var(--cta-filter);
+}
+
+
+/* end of Navigation */
 
 /* Search bar area */
 
@@ -63,12 +105,12 @@ header{
 
 /* End of Search bar area */
 
+
 /* Sections */
 
     .display-section{
         /* background-color: greenyellow; */
         width: 100%;
-        height: 50vh;
     }
 
     .section-name{
@@ -76,24 +118,21 @@ header{
         margin-left: 22px;
     }
     
-    /* Today's picks section */
-
     .scroll{
         width: 100%;
         height: 46px;
-        overflow-y:visible;
         overflow-x: auto;
         padding: 0 22px;
         white-space: nowrap;
-        overscroll-behavior: contain;
-        -webkit-overflow-scrolling: touch;
         scroll-behavior: smooth;
         margin-bottom: 25px;
     }
 
-    .todays-picks .scroll::-webkit-scrollbar{
+    .scroll::-webkit-scrollbar{
         display: none;
     }
+
+/* Todays picks section*/
 
     .todays-picks-scroll-wrapper{
         display: inline-block;
@@ -254,17 +293,29 @@ header{
         opacity: 1;
     }
 
-    /* End of Today's picks section */
+    .todays-picks-cards-scroll{
+        display: none;
+    }
+    .todays-picks-cards-scroll.active-scroll{
+        display: block;
+    }
+
+/* End of Today's picks section */
 
     /* Section to display recipies depending on time the time eg: morning = breakfast*/
 
     .delicious-time h1 span{
         color: var(--cta);
     }
+    .section-name-area h1, #see-all{
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
 
     .section-name-area{
         width: 100%;
-        margin: 0 22px;
+        padding: 0 22px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -273,4 +324,10 @@ header{
     #see-all{
         font-size: 15px;
         color: var(--light-cta);
+        text-decoration: none;
+        margin-top: 5px;
+    }
+
+    .delicious-time{
+        margin-bottom: 100px;
     }

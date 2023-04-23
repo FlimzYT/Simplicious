@@ -1,5 +1,6 @@
-let scrollItems = document.querySelectorAll('.todays-picks-scroll-item');
-let active = document.querySelector('.active')[0];
+
+const scrollItems = document.getElementsByClassName('todays-picks-scroll-item');
+const active = document.querySelector('.active')[0];
 
 for (var i = 0; i < scrollItems.length; i++) {
     scrollItems[i].addEventListener('mouseup', function() {
@@ -9,6 +10,18 @@ for (var i = 0; i < scrollItems.length; i++) {
       }
       // Add the "active" class to the clicked div
       this.classList.add('active');
-      console.log('yes')
+      filter(this.getAttribute('value'))
     });
   }
+
+
+const scrollLists = document.getElementsByClassName('todays-picks-cards-scroll');
+
+const filter = (number) =>{
+
+  for (var i = 0; i < scrollLists.length; i++) {
+    scrollLists[i].classList.remove('active-scroll');
+    console.log('index', i);
+  }
+  scrollLists[number].classList.add('active-scroll');
+}

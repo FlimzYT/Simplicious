@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simplicious</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/Simplicious logo no text.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Navigation -->
+    <nav>
+        <ul>
+            <a href="/next" class="nav-link active-page"> <img src="images/icons/Home.svg" alt="Home">Home</a>
+            <a href="#" class="nav-link"><img src="images/icons/Browse.svg" alt="Browse"></a>
+            <a href="#" class="nav-link"><img src="images/icons/Favorites.svg" alt="Favorites"></a>
+            <a href="#" class="nav-link"><img src="images/icons/search.svg" alt="Search"></a>
+        </ul>
+    </nav>
+<!-- /Navigation -->
+
 <!-- Search area -->
     <header>
         <div id="search-bar">
@@ -21,11 +33,12 @@
     </header>
 <!-- /Search area -->
 
+<!-- Today's picks section -->
     <section class="todays-picks display-section">
         <h1 class="section-name">Today's Picks</h1>
         <div class="scroll">
             <div class="todays-picks-scroll-wrapper">
-                <div class="todays-picks-scroll-item active">
+                <div class="todays-picks-scroll-item active" value="0">
 
                     <div class="icon-bg">
                         <img src="images/icons/pancakes.png" alt="pancake-icon">
@@ -34,7 +47,7 @@
                 </div>
             </div>
             <div class="todays-picks-scroll-wrapper">
-                <div class="todays-picks-scroll-item">
+                <div class="todays-picks-scroll-item" value="1">
 
                     <div class="icon-bg">
                         <img src="images/icons/hotdog.png" alt="pancake-icon">
@@ -43,7 +56,7 @@
                 </div>
             </div>
             <div class="todays-picks-scroll-wrapper">
-                <div class="todays-picks-scroll-item">
+                <div class="todays-picks-scroll-item" value="2">
 
                     <div class="icon-bg">
                         <img src="images/icons/hamburger.png" alt="pancake-icon">
@@ -52,7 +65,7 @@
                 </div>
             </div>
             <div class="todays-picks-scroll-wrapper">
-                <button class="todays-picks-scroll-item">
+                <button class="todays-picks-scroll-item" value="3">
 
                     <div class="icon-bg">
                         <img src="images/icons/pizza.png" alt="pancake-icon">
@@ -61,7 +74,7 @@
                 </button>
             </div>
             <div class="todays-picks-scroll-wrapper">
-                <div class="todays-picks-scroll-item">
+                <div class="todays-picks-scroll-item" value="4">
 
                     <div class="icon-bg">
                         <img src="images/icons/tropical_drink.png" alt="pancake-icon">
@@ -70,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <div class="scroll cards-scroll">
+        <div class="scroll cards-scroll todays-picks-cards-scroll active-scroll">
             <button class="recipe-scroll-item">
                 <img src="images/Food/grape-pancake.jpg" alt="grape-pancake">
                 <div class="filter"></div>
@@ -81,7 +94,7 @@
                         <h2>20 Min</h2>
                         <h2 class="dot">•</h2>
                         <img src="images/icons/serve.svg" alt="number of servings">
-                        <h2>1 Serve</h2>
+                        <h2>1 Serving</h2>
                     </div>
                 </div>
             </button>
@@ -95,7 +108,7 @@
                         <h2>25 Min</h2>
                         <h2 class="dot">•</h2>
                         <img src="images/icons/serve.svg" alt="number of servings">
-                        <h2>1 Serve</h2>
+                        <h2>1 Serving</h2>
                     </div>
                 </div>
             </button>
@@ -109,7 +122,237 @@
                         <h2>15 Min</h2>
                         <h2 class="dot">•</h2>
                         <img src="images/icons/serve.svg" alt="number of servings">
-                        <h2>1 Serve</h2>
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            
+        </div>
+
+        <div class="scroll cards-scroll todays-picks-cards-scroll">
+            <button class="recipe-scroll-item">
+                <img src="images/Food/Chili-Cheese-Dogs.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>Chili-Chease Hot Dogs</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>40 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>8 Servings</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/vegan-hot-dogs.webp" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>Vegan Loaded BBQ Dogs</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>20 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>4 Servings</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/crock-pot-dog.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>Crock Pot Hot Dog Chili</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>3 Hours</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>8 Servings</h2>
+                    </div>
+                </div>
+            </button>
+            
+        </div>
+
+        <div class="scroll cards-scroll todays-picks-cards-scroll">
+            <button class="recipe-scroll-item">
+                <img src="images/Food/grape-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>2 Pancakes</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>20 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/choco-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>2 Pancakes</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>25 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/regular-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>2 Pancake</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>15 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            
+        </div>
+
+        <div class="scroll cards-scroll todays-picks-cards-scroll">
+            <button class="recipe-scroll-item">
+                <img src="images/Food/grape-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>3 Pancakes</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>20 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/choco-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>3 Pancakes</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>25 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/regular-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>3 Pancake</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>15 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            
+        </div>
+
+        <div class="scroll cards-scroll todays-picks-cards-scroll">
+            <button class="recipe-scroll-item">
+                <img src="images/Food/grape-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>4 Pancakes</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>20 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/choco-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>4 Pancakes</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>25 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/regular-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>4 Pancake</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>15 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            
+        </div>
+
+        <div class="scroll cards-scroll todays-picks-cards-scroll">
+            <button class="recipe-scroll-item">
+                <img src="images/Food/grape-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>5 Pancakes</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>20 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/choco-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>5 Pancakes</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>25 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/regular-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>5 Pancake</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>15 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
                     </div>
                 </div>
             </button>
@@ -117,13 +360,62 @@
         </div>
         
     </section>
+<!-- /Today's picks section -->
 
+<!-- Suggestions depending on time of day section -->
     <section class="delicious-time">
         <div class="section-name-area">
              <h1>A <span>Delicious </span>Breakfast</h1>
-             <h2 id="see-all">See All <img src="images/icons/right-arrow.svg" alt="see all"></h2>
+             <a href='#' id="see-all">See All <img src="images/icons/right-arrow.svg" alt="see all"></a>
+        </div>
+        
+        <div class="scroll cards-scroll">
+            <button class="recipe-scroll-item">
+                <img src="images/Food/regular-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>Regular Pancake</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>15 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/grape-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>Grape Pancakes</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>20 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            <button class="recipe-scroll-item">
+                <img src="images/Food/choco-pancake.jpg" alt="grape-pancake">
+                <div class="filter"></div>
+                <div class="card-info">
+                    <h1>Choco Pancakes</h1>
+                    <div class="card-info-detail">
+                        <img src="images/icons/clock.svg" alt="time to make">
+                        <h2>25 Min</h2>
+                        <h2 class="dot">•</h2>
+                        <img src="images/icons/serve.svg" alt="number of servings">
+                        <h2>1 Serving</h2>
+                    </div>
+                </div>
+            </button>
+            
         </div>
     </section>
+<!-- /Suggestions depending on time of day section -->
 
     <script src="TodaysPicks.js"></script>
 </body>
