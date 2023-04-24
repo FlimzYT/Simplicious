@@ -201,7 +201,7 @@ header{
     .todays-picks-scroll-item::after{
         content: '';
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: calc(50% - 44px -31px);
         width: calc(100% - 31px);
         height: 11px;
